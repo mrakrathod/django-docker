@@ -10,8 +10,6 @@ before_install:
 script:
   - docker run django_docker python manage.py test
 
-
-
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID

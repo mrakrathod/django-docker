@@ -1,4 +1,4 @@
-FROM python:2.7-alpine as builder
+FROM python:2.7-alpine
 
 WORKDIR app
 
@@ -14,4 +14,4 @@ COPY . .
 FROM nginx
 EXPOSE 80
 
-COPY --from=builder /app /usr/share/nginx/html
+COPY --from=django_docker /app /usr/share/nginx/html
